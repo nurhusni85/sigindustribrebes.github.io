@@ -1,0 +1,324 @@
+<!doctype html>
+
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>BPS MAPS BREBES</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">        
+        
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+         
+
+
+     <!--styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" href="css/etlinefont.css">
+    <link href="css/style.css" type="text/css"  rel="stylesheet"/>
+
+
+   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    
+    <body  data-spy="scroll" data-target="#main-menu">
+ 
+
+  <!--Start Page loader -->
+  <div id="pageloader">   
+        <div class="loader">
+          <img src="images/progress.gif" alt='loader' />
+        </div>
+   </div>
+   <!--End Page loader -->
+   
+      
+   <!--Start Navigation-->
+        <header id="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!--Start Logo -->
+                            <div class="logo-nav">
+                                <a href="../../index.html">
+                                    <img src="images/logo.png" alt="Company logo" />
+                                </a>
+                            </div>
+                            <!--End Logo -->
+                            <div class="clear-toggle"></div>
+                            <div id="main-menu" class="collapse scroll navbar-right">
+                                <ul class="nav">
+                                
+                                    <li class="active"> <a href="../../index.html">Home</a> </li>
+
+                                    <li> <a href="../../blog.html">MAPS</a> </li>
+
+                                      <li> <a href="../../single-work.html">FOTO</a> </li>
+                                   
+                                    <li> <a href="../../index.html#prdb">PRDB BREBES</a> </li>
+                                    
+                                    <li> <a href="../../index.html#testimonials">Testimonials</a></li>
+                                     
+                                    <li> <a href="../../index.html#contact">Contact</a> </li>
+
+                        
+                                    
+                                </ul>
+                            </div><!-- end main-menu -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <!--End Navigation-->
+
+        <!-- page-header -->
+        <section id="page-header" class="parallax">
+           <div class="overlay"></div>
+            <div class="container">
+                <h1>SIG BANYAKNYA INDUSTRI Di Kabupaten Brebes</h1>
+                           <h1>TAHUN 2017 (INDUSTRI MENENGAH)</h1>
+               
+            </div>
+        </section>
+        <!-- /page-header -->
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/SIGTahun2017INDUSTRIMENENGAH_1.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-7.35983287689,108.478899663],[-6.71860898646,109.590065829]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var measureControl = new L.Control.Measure({
+            primaryLengthUnit: 'feet',
+            secondaryLengthUnit: 'miles',
+            primaryAreaUnit: 'sqfeet',
+            secondaryAreaUnit: 'sqmiles'
+        });
+        measureControl.addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        var overlay_Satelitegoo_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            opacity: 1.0
+        });
+        overlay_Satelitegoo_0.addTo(map);
+        map.addLayer(overlay_Satelitegoo_0);
+        function pop_SIGTahun2017INDUSTRIMENENGAH_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Kecamatan'] !== null ? Autolinker.link(String(feature.properties['Kecamatan'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['MENENGAH'] !== null ? Autolinker.link(String(feature.properties['MENENGAH'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SIGTahun2017INDUSTRIMENENGAH_1_0(feature) {
+            if (feature.properties['MENENGAH'] >= 0.000000 && feature.properties['MENENGAH'] <= 1.000000 ) {
+                return {
+                pane: 'pane_SIGTahun2017INDUSTRIMENENGAH_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,240,217,1.0)',
+            }
+            }
+            if (feature.properties['MENENGAH'] >= 1.000000 && feature.properties['MENENGAH'] <= 2.000000 ) {
+                return {
+                pane: 'pane_SIGTahun2017INDUSTRIMENENGAH_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(253,183,122,1.0)',
+            }
+            }
+            if (feature.properties['MENENGAH'] >= 2.000000 && feature.properties['MENENGAH'] <= 3.000000 ) {
+                return {
+                pane: 'pane_SIGTahun2017INDUSTRIMENENGAH_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(236,96,63,1.0)',
+            }
+            }
+            if (feature.properties['MENENGAH'] >= 3.000000 && feature.properties['MENENGAH'] <= 4.000000 ) {
+                return {
+                pane: 'pane_SIGTahun2017INDUSTRIMENENGAH_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(179,0,0,1.0)',
+            }
+            }
+        }
+        map.createPane('pane_SIGTahun2017INDUSTRIMENENGAH_1');
+        map.getPane('pane_SIGTahun2017INDUSTRIMENENGAH_1').style.zIndex = 401;
+        map.getPane('pane_SIGTahun2017INDUSTRIMENENGAH_1').style['mix-blend-mode'] = 'normal';
+        var layer_SIGTahun2017INDUSTRIMENENGAH_1 = new L.geoJson(json_SIGTahun2017INDUSTRIMENENGAH_1, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_SIGTahun2017INDUSTRIMENENGAH_1',
+            onEachFeature: pop_SIGTahun2017INDUSTRIMENENGAH_1,
+            style: style_SIGTahun2017INDUSTRIMENENGAH_1_0,
+        });
+        bounds_group.addLayer(layer_SIGTahun2017INDUSTRIMENENGAH_1);
+        map.addLayer(layer_SIGTahun2017INDUSTRIMENENGAH_1);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'SIG Tahun 2017 INDUSTRI MENENGAH<br /><table><tr><td style="text-align: center;"><img src="legend/SIGTahun2017INDUSTRIMENENGAH_1_SANGATSEDIKIT0.png" /></td><td>SANGAT SEDIKIT</td></tr><tr><td style="text-align: center;"><img src="legend/SIGTahun2017INDUSTRIMENENGAH_1_SEDIKIT1.png" /></td><td>SEDIKIT</td></tr><tr><td style="text-align: center;"><img src="legend/SIGTahun2017INDUSTRIMENENGAH_1_BANYAK2.png" /></td><td>BANYAK</td></tr><tr><td style="text-align: center;"><img src="legend/SIGTahun2017INDUSTRIMENENGAH_1_SANGATBANYAK3.png" /></td><td>SANGAT BANYAK</td></tr></table>': layer_SIGTahun2017INDUSTRIMENENGAH_1,"Satelite goo": overlay_Satelitegoo_0,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_SIGTahun2017INDUSTRIMENENGAH_1.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Kecamatan'] !== null?String('<div style="color: #000000; font-size: 8pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Kecamatan']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SIGTahun2017INDUSTRIMENENGAH_1'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        map.addControl(new L.Control.Search({
+            layer: layer_SIGTahun2017INDUSTRIMENENGAH_1,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'Kecamatan'}));
+        resetLabels([layer_SIGTahun2017INDUSTRIMENENGAH_1]);
+        map.on("zoomend", function(){
+            resetLabels([layer_SIGTahun2017INDUSTRIMENENGAH_1]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_SIGTahun2017INDUSTRIMENENGAH_1]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_SIGTahun2017INDUSTRIMENENGAH_1]);
+        });
+        </script>
+    </body>
+</html>
+
+
+
+
+ <!--Start Footer-->
+   <footer>
+       <div class="container">
+           <div class="row">
+               <!--Start copyright-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="copyright"><p>© BPS KAB BREBES by: <a href="https://brebeskab.bps.go.id">BPS KAB BREBES</a>
+                 </p></div>
+               </div>
+               <!--End copyright-->
+               
+               <!--start social icons-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="social-icons">
+                       <ul>
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="https://twitter.com/twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+               </div>
+               <!--End social icons-->
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+   </footer>
+   <!--End Footer-->
+
+   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+
+    <!--Plugins-->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+    <script type="text/javascript" src="js/jquery.appear.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    
+ </body>
+</html>
